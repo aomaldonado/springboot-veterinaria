@@ -17,7 +17,6 @@ public class DuenioService {
         this.duenioRepository = duenioRepository;
     }
 
-    //
     //TRAER TODOS
     public List<Duenio> traerTodos(){
         return duenioRepository.findAll();

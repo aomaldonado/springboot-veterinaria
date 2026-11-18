@@ -1,0 +1,7 @@
+ls
+git init => INICIAR REPO
+git status => COMPROBAR ESTADO
+git add . => SELECCIONA ELEMENTO A GUARDAR
+git commit -m "primer comit" => punto guardar
+git config --global user.email
+"you@example.com"

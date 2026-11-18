@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/duenio")
 public class DuenioController {
 
     private DuenioService duenioService;
 
-    public DuenioController(DuenioRepository duenioRepository) {
+    public DuenioController(DuenioService duenioService) {
         this.duenioService = duenioService;
     }
 
@@ -35,8 +35,8 @@ public class DuenioController {
 
     //GUARDAR
     @PostMapping
-    public ResponseEntity<Duenio> guardar(@RequestBody Duenio mascota){
-        Duenio nuevaMascota = duenioSerive.guardar(mascota);
-        return new ResponseEntity<>(nuevaMascota, HttpStatus.CREATED);
+    public ResponseEntity<Duenio> guardar(@RequestBody Duenio duenio){
+        Duenio nuevoDuenio = duenioService.guardar(duenio);
+        return new ResponseEntity<>(nuevoDuenio, HttpStatus.CREATED);
     }
 }
